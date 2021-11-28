@@ -11,27 +11,24 @@ import java.util.List;
 @Controller
 public class DawcaController {
 
-    @Autowired private DawcaService service;
+    @Autowired private DawcaService dawcaService;
 
     @GetMapping("/dawcy")
     public String pokazListeDawcow(Model model) {
-        List<Dawca> ListaDawcow = service.listAll();
+        List<Dawca> ListaDawcow = dawcaService.listAll();
         model.addAttribute("ListaDawcow", ListaDawcow);
-
-
         return "dawcy";
     }
 
     @GetMapping("/dawcy/nowy")
     public String formularzRejestracyjny(Model model) {
         model.addAttribute("dawca", new Dawca());
-        return "formularz_rejestracji";
+        return "formularz_dawcy";
     }
 
     @PostMapping("/dawcy/zapisz")
     public String zapiszDawcę(Dawca dawca){
-        service.save(dawca);
-
+        dawcaService.save(dawca);
         return "redirect:/dawcy";
     }
 
