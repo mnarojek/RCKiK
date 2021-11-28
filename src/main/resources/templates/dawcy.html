@@ -9,6 +9,30 @@
 
 <div class="container-fluid text-center">
     <div><h1>Lista Dawców</h1></div>
+    <div>
+        <table class="table table-bordered" >
+            <thead class="thead-dark">
+            <tr>
+                <th>Opcja</th>
+                <th>Nazwisko</th>
+                <th>Imię</th>
+                <th>PESEL</th>
+            </tr>
+            </thead>
+            <tbody>
+                <th:block th:each="dawca : ${ListaDawcow}">
+                    <tr>
+                        <td><input type="number"></td>
+                        <td>[[${dawca.lastname}]]</td>
+                        <td>[[${dawca.name}]]</td>
+                        <td>[[${dawca.PESEL}]]</td>
+
+                    </tr>
+
+                </th:block>
+            </tbody>
+        </table>
+    </div>
 
 
 
