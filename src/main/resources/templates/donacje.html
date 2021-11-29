@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista donacji</title>
+    <link rel="stylesheet" type="text/css"  th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <div><h1>Lista Donacji</h1></div>
+        <div>
+            <table class="table table-bordered" >
+                <thead class="thead-dark">
+                <tr>
+                    <th>Opcja</th>
+                    <th>Numer Donacji</th>
+                    <th>Rodzaj donacji</th>
+                    <th>Data Donacji</th>
+                    <th>Stan Donacji</th>
+                </tr>
+                </thead>
+                <tbody>
+                <th:block th:each="donacja : ${listaDonacji}">
+                    <tr>
+
+
+
+                    </tr>
+
+                </th:block>
+                </tbody>
+            </table>
+        </div>
+
+</body>
+</html>
