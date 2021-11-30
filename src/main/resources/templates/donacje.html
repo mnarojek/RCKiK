@@ -22,9 +22,11 @@
                 <tbody>
                 <th:block th:each="donacja : ${listaDonacji}">
                     <tr>
-
-
-
+                        <td><input type="number"></td>
+                        <td>[[${donacja.number}]]</td>
+                        <td>[[${donacja.type}]]</td>
+                        <td>Data</td>
+                        <td>stan</td>
                     </tr>
 
                 </th:block>

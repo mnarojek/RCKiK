@@ -22,6 +22,8 @@ public class Dawca {
     private String sex;
 
 
+
+
     public Integer getId() {
         return id;
     }
