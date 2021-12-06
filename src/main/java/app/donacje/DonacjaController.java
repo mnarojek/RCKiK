@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -31,6 +32,13 @@ public class DonacjaController {
     public String zapiszDonacje(Donacja donacja){
         donacjaService.save(donacja);
         return "redirect:/donacje";
+    }
+
+    @GetMapping("/donacje/nowy")
+    public String nowaDonacja(Model model, @RequestParam(name="idDawcy", required = false) String idDawcy){
+        model.addAttribute("donacja", new Donacja());
+        System.out.println(idDawcy);
+        return "formularz_donacji";
     }
 
 }

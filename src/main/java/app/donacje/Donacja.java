@@ -1,6 +1,10 @@
 package app.donacje;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import javax.persistence.*;
+import java.time.Instant;
 
 @Entity
 @Table(name = "donacja")
@@ -15,6 +19,27 @@ public class Donacja {
 
     @Column(nullable = false)
     private String type;
+
+    @Column(nullable = false)
+    @CreationTimestamp
+    private Instant date;
+
+    @Column
+    @UpdateTimestamp
+    private Instant modifiteAdd;
+
+
+
+
+
+
+    public Instant getDate() {
+        return date;
+    }
+
+    public void setDate(Instant date) {
+        this.date = date;
+    }
 
     public Integer getId() {
         return id;
