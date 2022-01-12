@@ -9,7 +9,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 6)
+    @Column(nullable = false, length = 6)
     private String kra;
 
     @Column(nullable = false, length = 64)
@@ -29,12 +29,12 @@ public class User {
         this.id = id;
     }
 
-    public String getEmail() {
+    public String getkra() {
         return kra;
     }
 
-    public void setEmail(String email) {
-        this.kra = email;
+    public void setkra(String kra) {
+        this.kra = kra;
     }
 
     public String getPassword() {
