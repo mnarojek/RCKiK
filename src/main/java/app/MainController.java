@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 public class MainController {
 
-//    @GetMapping()
-//    public String showHomePage(){
-//        return "index";
-//    }
+    @GetMapping()
+    public String showHomePage(){
+        return "index";
+    }
 
 //    @GetMapping("/rejestracja")
 //    public String pokazFormularz(Model model){
