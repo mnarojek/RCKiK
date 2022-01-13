@@ -63,4 +63,6 @@ public class Dawca {
     public void setSex(String sex) {
         this.sex = sex;
     }
+
+    //komentarz
 }
